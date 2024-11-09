@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import candyCrushImage from './Photos/candy crush.eb648b239f8247ff1aa0.png';
 import placeholder from './Photos/placeholder.png';
-
+import cantina from './Photos/cantina.63f69966ee95f69d2331.png';
 function Projects({ isNightMode }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [projectsPerRow, setProjectsPerRow] = useState(3);
 
   const projects = [
     {
-      title: 'Project 1',
-      description: 'Description of project 1',
-      imageUrl: placeholder,
-      codeLink: 'https://github.com/user/project1',
-      
+      title: 'Cantina e cucina',
+      description: 'This project is a copy of the original site cantina e cucina.It is a site which contains all the features of the previous one.',
+      imageUrl: cantina,
+      codeLink: 'https://github.com/Grasu-Lucian/cantina_e_cucina',
+      siteLink: 'https://cantina-e-cucina.netlify.app/'
     },
     {
       title: 'Candy crush',
@@ -23,19 +23,12 @@ function Projects({ isNightMode }) {
       siteLink: 'https://github.com/Grasu-Lucian/Candy_crush'
     },
     {
-      title: 'Project 3',
-      description: 'Description of project 3',
+      title: 'Book-Store',
+      description: `It's a RESTful API for managing books in a store with added user authentication using GO`,
       imageUrl: placeholder,
-      codeLink: 'https://github.com/user/project3',
-      siteLink: 'https://project3.com'
+      codeLink: 'https://github.com/Grasu-Lucian/Book-Store',
     },
-    {
-      title: 'Project 3',
-      description: 'Description of project 3',
-      imageUrl: placeholder,
-      codeLink: 'https://github.com/user/project3',
-      siteLink: null // No site link available
-    },
+
     // Add more projects as needed
   ];
 
