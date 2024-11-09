@@ -14,7 +14,7 @@ function Navbar({ toggleTheme, isNightMode }) {
             onClick={toggleTheme} 
             className={`night-mode-button ${isNightMode ? 'active' : ''}`}
           >
-            <span></span>
+            <span className={`icon ${isNightMode ? 'fa fa-moon' : 'fa fa-sun'}`}></span>
           </button>
         </li>
       </ul>
