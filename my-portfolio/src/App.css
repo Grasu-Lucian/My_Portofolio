@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 /* Other custom styles for the App component */
-
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* Example custom styles */
 .bg-background {
   background-color: #e0f2fe;
@@ -30,4 +34,16 @@
 
 .dark .text-primary {
   color: #f7fafc;
+}
+
+/* Margin color */
+.margin-color {
+  background-color: #90c5fd;
+}
+
+/* Hide margin on small screens */
+@media (max-width: 480px) {
+  .p-4 {
+    padding: 0;
+  }
 }
