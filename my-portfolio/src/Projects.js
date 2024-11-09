@@ -21,7 +21,7 @@ function Projects({ isNightMode }) {
       title: 'Candy crush',
       description: 'This site holds the basic functionalities of a candy crush games and some special candies as well',
       imageUrl: candyCrushImage,
-      codeLink: 'https://github.com/user/project2',
+      codeLink: 'https://candy-crush-copy.netlify.app/',
       siteLink: 'https://github.com/Grasu-Lucian/Candy_crush'
     },
     {
