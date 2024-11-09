@@ -14,7 +14,9 @@
     justify-content: center;
     position: relative;
   }
-  
+  h1{
+    color: #1e3a8a;
+  }
   .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -58,12 +60,19 @@
   }
   
   .arrow-button {
-    background: none;
+    background-color: var(--skill-hover-bg-color, #e5e7eb);
     border: none;
     color: var(--skill-text-color, #1f2937);
     font-size: 2rem;
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .arrow-button:hover {
+    background-color: var(--skill-bg-color, #f3f4f6);
+    transform: scale(1.1);
   }
   
   .arrow-button:disabled {
@@ -78,7 +87,7 @@
   
   .projects-section.dark-mode .project {
     background-color: var(--dark-skill-bg-color, #374151);
-    color: var(--dark-skill-text-color, #f3f4f6);
+    color: var (--dark-skill-text-color, #f3f4f6);
   }
   
   .projects-section.dark-mode .button {
@@ -91,7 +100,12 @@
   }
   
   .projects-section.dark-mode .arrow-button {
+    background-color: var(--dark-skill-hover-bg-color, #4b5563);
     color: var(--dark-skill-text-color, #f3f4f6);
+  }
+  
+  .projects-section.dark-mode .arrow-button:hover {
+    background-color: var(--dark-skill-bg-color, #374151);
   }
   
   .toggle-dark-mode-button {
@@ -129,5 +143,20 @@
   @media (max-width: 480px) {
     .projects-container {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .project {
+      padding: 1rem;
+      margin: 0 auto;
+      max-width: 95%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .arrow-button {
+      font-size: 1.5rem;
+      padding: 0.75rem;
+      margin: 0 0.5rem;
     }
   }
