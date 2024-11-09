@@ -1,0 +1,68 @@
+/* Projects.css */
+
+.projects-section {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .project {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--skill-bg-color);
+    color: var(--skill-text-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .button {
+    background-color: var(--skill-hover-bg-color);
+    color: var(--skill-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: var(--skill-bg-color);
+  }
+  
+  .arrow-button {
+    background: none;
+    border: none;
+    color: var(--skill-text-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .arrow-button:disabled {
+    display: none;
+  }

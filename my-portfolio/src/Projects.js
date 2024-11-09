@@ -1,0 +1,99 @@
+import React, { useState } from 'react';
+import './Projects.css';
+import candyCrushImage from './Photos/candy crush.eb648b239f8247ff1aa0.png';
+
+function Projects() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const projects = [
+    {
+      title: 'Project 1',
+      description: 'Description of project 1',
+      imageUrl: 'path/to/image1.png',
+      codeLink: 'https://github.com/user/project1',
+      siteLink: 'https://project1.com'
+    },
+    {
+      title: 'Candy crush',
+      description: 'This site holds the basic functionalities of a candy crush games and some special candies as well',
+      imageUrl: candyCrushImage,
+      codeLink: 'https://github.com/user/project2',
+      siteLink: 'https://github.com/Grasu-Lucian/Candy_crush'
+    },
+    {
+        title: 'Project 1',
+        description: 'Description of project 1',
+        imageUrl: 'path/to/image1.png',
+        codeLink: 'https://github.com/user/project1',
+        siteLink: 'https://project1.com'
+      },
+      {
+        title: 'Project 1',
+        description: 'Description of project 1',
+        imageUrl: 'path/to/image1.png',
+        codeLink: 'https://github.com/user/project1',
+        siteLink: 'https://project1.com'
+      }
+    // Add more projects as needed
+  ];
+
+  const handlePrevClick = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (currentIndex < Math.ceil(projects.length / 3) - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const getVisibleProjects = () => {
+    const startIndex = currentIndex * 3;
+    return projects.slice(startIndex, startIndex + 3);
+  };
+
+  return (
+    <section id="projects" className="projects-section">
+      <h2 className="text-2xl font-bold mb-4">Projects</h2>
+      <div className="slider">
+        <button
+          className="arrow-button left"
+          onClick={handlePrevClick}
+          disabled={currentIndex === 0}
+        >
+          &lt;
+        </button>
+        <div className="projects-container">
+          {getVisibleProjects().map((project, index) => (
+            <div key={index} className="project">
+              <img src={project.imageUrl} alt={project.title} />
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="buttons">
+                <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="button">
+                  View Code
+                </a>
+                {project.siteLink && (
+                  <a href={project.siteLink} target="_blank" rel="noopener noreferrer" className="button">
+                    View Site
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <button
+          className="arrow-button right"
+          onClick={handleNextClick}
+          disabled={currentIndex === Math.ceil(projects.length / 3) - 1}
+        >
+          &gt;
+        </button>
+      </div>
+    </section>
+  );
+}
+
+export default Projects;
