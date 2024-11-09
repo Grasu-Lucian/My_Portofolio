@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import candyCrushImage from './Photos/candy crush.eb648b239f8247ff1aa0.png';
+import placeholder from './Photos/placeholder.png';
 
-function Projects() {
+function Projects({ isNightMode }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projects = [
     {
       title: 'Project 1',
       description: 'Description of project 1',
-      imageUrl: 'path/to/image1.png',
+      imageUrl: placeholder,
       codeLink: 'https://github.com/user/project1',
       siteLink: 'https://project1.com'
     },
@@ -21,19 +22,19 @@ function Projects() {
       siteLink: 'https://github.com/Grasu-Lucian/Candy_crush'
     },
     {
-        title: 'Project 1',
-        description: 'Description of project 1',
-        imageUrl: 'path/to/image1.png',
-        codeLink: 'https://github.com/user/project1',
-        siteLink: 'https://project1.com'
-      },
-      {
-        title: 'Project 1',
-        description: 'Description of project 1',
-        imageUrl: 'path/to/image1.png',
-        codeLink: 'https://github.com/user/project1',
-        siteLink: 'https://project1.com'
-      }
+      title: 'Project 3',
+      description: 'Description of project 3',
+      imageUrl: placeholder,
+      codeLink: 'https://github.com/user/project3',
+      siteLink: 'https://project3.com'
+    },
+    {
+      title: 'Project 3',
+      description: 'Description of project 3',
+      imageUrl: placeholder,
+      codeLink: 'https://github.com/user/project3',
+      siteLink: 'https://project3.com'
+    },
     // Add more projects as needed
   ];
 
@@ -55,7 +56,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className={`projects-section ${isNightMode ? 'dark-mode' : ''}`}>
       <h2 className="text-2xl font-bold mb-4">Projects</h2>
       <div className="slider">
         <button

@@ -18,7 +18,7 @@ function App() {
       <div className="pt-16 p-4 bg-background dark:bg-night text-primary dark:text-light">
         <AboutMe />
         <Skills />
-        <Projects />
+        <Projects isNightMode={isNightMode} />
         {/* Other components or content can go here */}
       </div>
     </div>

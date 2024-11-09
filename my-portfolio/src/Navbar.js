@@ -10,7 +10,7 @@ function Navbar({ toggleTheme, isNightMode }) {
 
   return (
     <>
-      <nav className="navbar fixed top-0 left-0 w-full bg-primary text-white flex justify-between items-center p-4">
+      <nav className="navbar fixed top-0 left-0 w-full bg-primary text-white flex justify-between items-center p-4 z-50">
         <div className="text-lg font-bold">Grasu Lucian</div>
         <ul className="flex space-x-4 items-center">
           <li><a href="#home" className="hover:bg-secondary p-2 rounded transition duration-300 ease-in-out">Home</a></li>
