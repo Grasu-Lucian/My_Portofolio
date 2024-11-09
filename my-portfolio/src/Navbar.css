@@ -4,6 +4,7 @@
 .navbar {
     background-color: #1e3a8a; /* Primary color */
     overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
   }
   
   .dark .navbar {
@@ -16,6 +17,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: color 0.5s ease-in-out;
   }
   
   .navbar ul {
@@ -36,6 +38,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.5s ease-in-out;
   }
   
   .navbar li a:hover {

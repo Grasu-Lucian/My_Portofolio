@@ -7,10 +7,12 @@
 /* Example custom styles */
 .bg-background {
   background-color: #e0f2fe;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .text-primary {
   color: #1e3a8a;
+  transition: color 0.5s ease-in-out;
 }
 
 .bg-night {
