@@ -42,8 +42,3 @@ body{
 }
 
 /* Hide margin on small screens */
-@media (max-width: 480px) {
-  .p-4 {
-    padding: 0;
-  }
-}

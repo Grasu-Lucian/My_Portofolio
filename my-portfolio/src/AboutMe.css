@@ -28,6 +28,7 @@
 }
 
 /* Additional styles for smaller screens */
+
 @media (max-width: 480px) {
   .about-me {
     @apply h-auto;
@@ -41,10 +42,15 @@
     @apply mt-8;
   }
   .p-4 {
-    padding: 0;
+    padding: 1rem;
   }
-  .about-me {
+ 
+  .about-me-image {
     width: 82%;
-    
   }
 }
+@media (max-width: 770px) {
+    .about-me-image img{
+        width: 80%;
+    }
+    }
