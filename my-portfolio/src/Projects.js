@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import candyCrushImage from './Photos/candy crush.eb648b239f8247ff1aa0.png';
 import placeholder from './Photos/placeholder.png';
 
 function Projects({ isNightMode }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [projectsPerRow, setProjectsPerRow] = useState(3);
 
   const projects = [
     {
@@ -38,6 +39,25 @@ function Projects({ isNightMode }) {
     // Add more projects as needed
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setProjectsPerRow(1);
+      } else if (window.innerWidth <= 770) {
+        setProjectsPerRow(2);
+      } else {
+        setProjectsPerRow(3);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call initially to set the correct value
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const handlePrevClick = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -45,14 +65,14 @@ function Projects({ isNightMode }) {
   };
 
   const handleNextClick = () => {
-    if (currentIndex < Math.ceil(projects.length / 3) - 1) {
+    if (currentIndex < Math.ceil(projects.length / projectsPerRow) - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
   const getVisibleProjects = () => {
-    const startIndex = currentIndex * 3;
-    return projects.slice(startIndex, startIndex + 3);
+    const startIndex = currentIndex * projectsPerRow;
+    return projects.slice(startIndex, startIndex + projectsPerRow);
   };
 
   return (
@@ -88,7 +108,7 @@ function Projects({ isNightMode }) {
         <button
           className="arrow-button right"
           onClick={handleNextClick}
-          disabled={currentIndex === Math.ceil(projects.length / 3) - 1}
+          disabled={currentIndex === Math.ceil(projects.length / projectsPerRow) - 1}
         >
           &gt;
         </button>
