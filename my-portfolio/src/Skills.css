@@ -1,0 +1,52 @@
+/* Skills.css */
+
+:root {
+    --skill-bg-color: #1e3a8a;
+    --skill-hover-bg-color: #3b82f6;
+    --skill-text-color: white;
+  }
+  
+  .dark {
+    --skill-bg-color: #2d3748;
+    --skill-hover-bg-color: #4a5568;
+    --skill-text-color: #f7fafc;
+  }
+  
+  .skills-section {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  .skills-category {
+    margin-bottom: 2rem;
+  }
+  
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--skill-bg-color);
+    color: var(--skill-text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .skills-list li:hover {
+    transform: scale(1.05);
+    background-color: var(--skill-hover-bg-color);
+  }
+  
+  .skills-list i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
