@@ -18,6 +18,10 @@
     padding: 14px 16px;
     text-decoration: none;
     transition: color 0.5s ease-in-out;
+    font-family: 'Lora', serif; /* Use Lora font */
+    font-weight: 400; /* Regular weight for slimmer text */
+    letter-spacing: 0.1em; /* Increase letter spacing */
+    font-size: 2rem; /* Increase font size */
   }
   
   .navbar ul {
