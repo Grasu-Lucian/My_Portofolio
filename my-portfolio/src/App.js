@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './Navbar';
+import './Navbar.css';
 
 function App() {
   const [isNightMode, setIsNightMode] = useState(false);

@@ -20,3 +20,12 @@
 .text-light {
   color: #f7fafc;
 }
+
+/* Dark mode styles */
+.dark .bg-background {
+  background-color: #1a202c;
+}
+
+.dark .text-primary {
+  color: #f7fafc;
+}

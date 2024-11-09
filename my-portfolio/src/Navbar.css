@@ -2,8 +2,12 @@
 
 /* Custom styles for the Navbar */
 .navbar {
-    background-color: #333;
+    background-color: #1e3a8a; /* Primary color */
     overflow: hidden;
+  }
+  
+  .dark .navbar {
+    background-color: #1a202c; /* Dark mode background */
   }
   
   .navbar h1 {
@@ -35,7 +39,11 @@
   }
   
   .navbar li a:hover {
-    background-color: #111;
+    background-color: #3b82f6; /* Secondary color */
+  }
+  
+  .dark .navbar li a:hover {
+    background-color: #2d3748; /* Dark mode hover color */
   }
   
   /* Styles for the night mode button */
