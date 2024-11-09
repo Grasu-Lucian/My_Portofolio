@@ -25,18 +25,18 @@ function Projects({ isNightMode }) {
       siteLink: 'https://github.com/Grasu-Lucian/Candy_crush'
     },
     {
-      title: 'Book-Store',
-      description: `It's a RESTful API for managing books in a store with added user authentication using GO`,
-      imageUrl: placeholder,
-      codeLink: 'https://github.com/Grasu-Lucian/Book-Store',
-    },
-    {
       title:`Retro Games`,
       description:`A simple site i made using react that contains some information about retro games like space invaders, pacman and mario`,
       imageUrl:retroGames,
       codeLink:`https://github.com/Grasu-Lucian/Retrogames_project`,
       siteLink:`https://retro-games-by-grasu-lucian.netlify.app/`
-    }
+    },
+    {
+      title: 'Book-Store',
+      description: `It's a RESTful API for managing books in a store with added user authentication using GO`,
+      imageUrl: placeholder,
+      codeLink: 'https://github.com/Grasu-Lucian/Book-Store',
+    },
 
     // Add more projects as needed
   ];
