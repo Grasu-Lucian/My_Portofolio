@@ -21,6 +21,7 @@ body{
 
 .bg-night {
   background-color: #1a202c;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .text-light {
@@ -30,6 +31,7 @@ body{
 /* Dark mode styles */
 .dark .bg-background {
   background-color: #1a202c;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .dark .text-primary {
