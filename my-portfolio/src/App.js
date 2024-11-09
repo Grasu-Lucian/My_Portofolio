@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
+import ContactMe from './ContactMe';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Projects isNightMode={isNightMode} />
+        <ContactMe />
         {/* Other components or content can go here */}
       </div>
     </div>

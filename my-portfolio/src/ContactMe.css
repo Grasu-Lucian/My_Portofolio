@@ -1,0 +1,108 @@
+/* ContactMe.css */
+
+:root {
+    --contact-bg-color: #1e3a8a;
+    --contact-hover-bg-color: #3b82f6;
+    --contact-text-color: #1e3a8a;
+    --contact-input-bg-color: white; /* White background for inputs */
+    --contact-input-text-color: #1e3a8a; /* Dark blue color for text */
+    --contact-hover-text-color: #3b82f6; /* Light blue color for text on hover */
+  }
+  
+  .dark {
+    --contact-bg-color: #2d3748;
+    --contact-hover-bg-color: #4a5568;
+    --contact-text-color: #f7fafc;
+    --contact-input-bg-color: white; /* White background for inputs in dark mode */
+    --contact-input-text-color: #1e3a8a; /* Dark blue color for text in dark mode */
+    --contact-hover-text-color: #3b82f6; /* Light blue color for text on hover in dark mode */
+  }
+  
+  .contact-section {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--contact-text-color);
+  }
+  
+  .contact-section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--contact-text-color);
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--contact-text-color);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--contact-input-bg-color); /* White background */
+    color: var(--contact-input-text-color); /* Text color */
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .send-button {
+    padding: 0.75rem;
+    background-color: var(--contact-hover-bg-color);
+    color: var(--contact-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .send-button:hover {
+    background-color: var(--contact-text-color);
+    color: var(--contact-hover-text-color); /* Light blue text color on hover */
+  }
+  
+  /* Dark mode styles */
+  .contact-section.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+  
+  .contact-section.dark-mode .form-group input,
+  .contact-section.dark-mode .form-group textarea {
+    background-color: var(--contact-input-bg-color); /* White background in dark mode */
+    color: var(--contact-input-text-color); /* Dark blue text color in dark mode */
+    border: 1px solid #4a5568;
+  }
+  
+  .contact-section.dark-mode .send-button {
+    background-color: var(--dark-skill-hover-bg-color);
+    color: var(--dark-skill-text-color);
+  }
+  
+  .contact-section.dark-mode .send-button:hover {
+    background-color: var(--dark-skill-bg-color);
+    color: var(--contact-hover-text-color); /* Light blue text color on hover in dark mode */
+  }
