@@ -4,9 +4,9 @@ import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-background text-primary">
       <Navbar />
-      <div className="ml-48 p-4">
+      <div className="pt-16 p-4">
         {/* Other components or content can go here */}
       </div>
     </div>
