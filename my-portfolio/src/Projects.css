@@ -1,162 +1,168 @@
 /* Projects.css */
 
 .projects-section {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: var(--bg-color, white);
-    color: var(--text-color, black);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  h1{
-    color: #1e3a8a;
-  }
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bg-color, white);
+  color: var(--text-color, black);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h1 {
+  color: var(--text-color, #1e3a8a);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.project {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--skill-bg-color, #f3f4f6);
+  color: var(--skill-text-color, #1f2937);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  background-color: var(--skill-hover-bg-color, #e5e7eb);
+  color: var(--skill-text-color, #1f2937);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--skill-bg-color, #f3f4f6);
+}
+
+.arrow-button {
+  background-color: var(--skill-hover-bg-color, #e5e7eb);
+  border: none;
+  color: var(--skill-text-color, #1f2937);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.arrow-button:hover {
+  background-color: var(--skill-bg-color, #f3f4f6);
+  transform: scale(1.1);
+}
+
+.arrow-button:disabled {
+  display: none;
+}
+
+/* Dark mode styles */
+.projects-section.dark-mode {
+  background-color: var(--dark-bg-color, #1f2937);
+  color: var(--dark-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode h1 {
+  color: var(--dark-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode .project {
+  background-color: var(--dark-skill-bg-color, #374151);
+  color: var(--dark-skill-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode .button {
+  background-color: var(--dark-skill-hover-bg-color, #4b5563);
+  color: var(--dark-skill-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode .button:hover {
+  background-color: var(--dark-skill-bg-color, #374151);
+}
+
+.projects-section.dark-mode .arrow-button {
+  background-color: var(--dark-skill-hover-bg-color, #4b5563);
+  color: var(--dark-skill-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode .arrow-button:hover {
+  background-color: var(--dark-skill-bg-color, #374151);
+}
+
+.toggle-dark-mode-button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--skill-hover-bg-color, #e5e7eb);
+  color: var(--skill-text-color, #1f2937);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-dark-mode-button:hover {
+  background-color: var(--skill-bg-color, #f3f4f6);
+}
+
+/* Dark mode styles for the toggle button */
+.projects-section.dark-mode .toggle-dark-mode-button {
+  background-color: var(--dark-skill-hover-bg-color, #4b5563);
+  color: var(--dark-skill-text-color, #f3f4f6);
+}
+
+.projects-section.dark-mode .toggle-dark-mode-button:hover {
+  background-color: var(--dark-skill-bg-color, #374151);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 770px) {
   .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .project {
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 1rem;
-    background-color: var(--skill-bg-color, #f3f4f6);
-    color: var(--skill-text-color, #1f2937);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
-  
-  .project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+
+  .project {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 95%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .button {
-    background-color: var(--skill-hover-bg-color, #e5e7eb);
-    color: var(--skill-text-color, #1f2937);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: var(--skill-bg-color, #f3f4f6);
-  }
-  
+
   .arrow-button {
-    background-color: var(--skill-hover-bg-color, #e5e7eb);
-    border: none;
-    color: var(--skill-text-color, #1f2937);
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    margin: 0 0.5rem;
   }
-  
-  .arrow-button:hover {
-    background-color: var(--skill-bg-color, #f3f4f6);
-    transform: scale(1.1);
-  }
-  
-  .arrow-button:disabled {
-    display: none;
-  }
-  
-  /* Dark mode styles */
-  .projects-section.dark-mode {
-    background-color: var(--dark-bg-color, #1f2937);
-    color: var(--dark-text-color, #f3f4f6);
-  }
-  
-  .projects-section.dark-mode .project {
-    background-color: var(--dark-skill-bg-color, #374151);
-    color: var (--dark-skill-text-color, #f3f4f6);
-  }
-  
-  .projects-section.dark-mode .button {
-    background-color: var(--dark-skill-hover-bg-color, #4b5563);
-    color: var(--dark-skill-text-color, #f3f4f6);
-  }
-  
-  .projects-section.dark-mode .button:hover {
-    background-color: var(--dark-skill-bg-color, #374151);
-  }
-  
-  .projects-section.dark-mode .arrow-button {
-    background-color: var(--dark-skill-hover-bg-color, #4b5563);
-    color: var(--dark-skill-text-color, #f3f4f6);
-  }
-  
-  .projects-section.dark-mode .arrow-button:hover {
-    background-color: var(--dark-skill-bg-color, #374151);
-  }
-  
-  .toggle-dark-mode-button {
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--skill-hover-bg-color, #e5e7eb);
-    color: var(--skill-text-color, #1f2937);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .toggle-dark-mode-button:hover {
-    background-color: var(--skill-bg-color, #f3f4f6);
-  }
-  
-  /* Dark mode styles for the toggle button */
-  .projects-section.dark-mode .toggle-dark-mode-button {
-    background-color: var(--dark-skill-hover-bg-color, #4b5563);
-    color: var(--dark-skill-text-color, #f3f4f6);
-  }
-  
-  .projects-section.dark-mode .toggle-dark-mode-button:hover {
-    background-color: var(--dark-skill-bg-color, #374151);
-  }
-  
-  /* Media queries for responsive design */
-  @media (max-width: 770px) {
-    .projects-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .projects-container {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      padding: 1rem;
-    }
-  
-    .project {
-      padding: 1rem;
-      margin: 0 auto;
-      max-width: 95%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  
-    .arrow-button {
-      font-size: 1.5rem;
-      padding: 0.75rem;
-      margin: 0 0.5rem;
-    }
-  }
+}
