@@ -20,6 +20,7 @@ function App() {
         <section id="about-me">
           <AboutMe />
         </section>
+        <Skills isNightMode={isNightMode} />
         <section id="projects">
           <Projects isNightMode={isNightMode} />
         </section>
