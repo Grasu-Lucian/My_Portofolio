@@ -13,7 +13,7 @@ function Projects({ isNightMode }) {
       description: 'Description of project 1',
       imageUrl: placeholder,
       codeLink: 'https://github.com/user/project1',
-      siteLink: 'https://project1.com'
+      
     },
     {
       title: 'Candy crush',
@@ -34,7 +34,7 @@ function Projects({ isNightMode }) {
       description: 'Description of project 3',
       imageUrl: placeholder,
       codeLink: 'https://github.com/user/project3',
-      siteLink: 'https://project3.com'
+      siteLink: null // No site link available
     },
     // Add more projects as needed
   ];
