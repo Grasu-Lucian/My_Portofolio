@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Other custom styles for the App component */
+
+/* Example custom styles */
+.bg-background {
+  background-color: #e0f2fe;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.text-primary {
+  color: #1e3a8a;
+  transition: color 0.5s ease-in-out;
+}
+
+.bg-night {
+  background-color: #1a202c;
+}
+
+.text-light {
+  color: #f7fafc;
+}
+
+/* Dark mode styles */
+.dark .bg-background {
+  background-color: #1a202c;
+}
+
+.dark .text-primary {
+  color: #f7fafc;
+}
+
+/* Styles for the AboutMe section */
+.about-me {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
