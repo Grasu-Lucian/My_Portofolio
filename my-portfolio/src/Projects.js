@@ -3,6 +3,8 @@ import './Projects.css';
 import candyCrushImage from './Photos/candy crush.eb648b239f8247ff1aa0.png';
 import placeholder from './Photos/placeholder.png';
 import cantina from './Photos/cantina.63f69966ee95f69d2331.png';
+import retroGames from './Photos/image.png';
+
 function Projects({ isNightMode }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [projectsPerRow, setProjectsPerRow] = useState(3);
@@ -28,6 +30,13 @@ function Projects({ isNightMode }) {
       imageUrl: placeholder,
       codeLink: 'https://github.com/Grasu-Lucian/Book-Store',
     },
+    {
+      title:`Retro Games`,
+      description:`A simple site i made using react that contains some information about retro games like space invaders, pacman and mario`,
+      imageUrl:retroGames,
+      codeLink:`https://github.com/Grasu-Lucian/Retrogames_project`,
+      siteLink:`https://retro-games-by-grasu-lucian.netlify.app/`
+    }
 
     // Add more projects as needed
   ];
