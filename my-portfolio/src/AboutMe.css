@@ -2,37 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Other custom styles for the App component */
-
-/* Example custom styles */
-.bg-background {
-  background-color: #e0f2fe;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.text-primary {
-  color: #1e3a8a;
-  transition: color 0.5s ease-in-out;
-}
-
-.bg-night {
-  background-color: #1a202c;
-}
-
-.text-light {
-  color: #f7fafc;
-}
-
-/* Dark mode styles */
-.dark .bg-background {
-  background-color: #1a202c;
-}
-
-.dark .text-primary {
-  color: #f7fafc;
-}
-
 /* Styles for the AboutMe section */
 .about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 4rem); /* Adjust for the height of the navbar */
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #1a202c;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.dark .about-me {
+  background-color: #2d3748;
+  color: #f7fafc;
+}
+
+.about-me-content {
+  width: 50%; /* Occupy half of the section */
+  text-align: center;
+}
+
+.about-me-image {
+  width: 50%; /* Occupy half of the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Optional: make the image circular */
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
