@@ -17,10 +17,15 @@ function App() {
     <div className={`App ${isNightMode ? 'dark' : ''}`}>
       <Navbar toggleTheme={toggleTheme} isNightMode={isNightMode} />
       <div className="pt-16 p-4 bg-background dark:bg-night text-primary dark:text-light">
-        <AboutMe />
-        <Skills />
-        <Projects isNightMode={isNightMode} />
-        <ContactMe />
+        <section id="about-me">
+          <AboutMe />
+        </section>
+        <section id="projects">
+          <Projects isNightMode={isNightMode} />
+        </section>
+        <section id="contact">
+          <ContactMe />
+        </section>
         {/* Other components or content can go here */}
       </div>
     </div>

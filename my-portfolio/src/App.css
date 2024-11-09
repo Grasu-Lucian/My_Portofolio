@@ -44,3 +44,17 @@ body{
 }
 
 /* Hide margin on small screens */
+/* App.css */
+
+:root {
+  --navbar-height: 64px; /* Adjust this value based on your navbar height */
+}
+
+#about-me,
+#projects,
+#contact {
+  padding-top: var(--navbar-height);
+  margin-top: -var(--navbar-height); /* Negative margin to offset the padding */
+}
+
+/* Other styles */

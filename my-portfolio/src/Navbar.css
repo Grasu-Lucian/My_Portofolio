@@ -2,171 +2,161 @@
 
 /* Custom styles for the Navbar */
 .navbar {
-    background-color: #1e3a8a; /* Primary color */
-    overflow: hidden;
-    transition: background-color 0.5s ease-in-out;
-  }
-  
-  .dark .navbar {
-    background-color: #1a202c; /* Dark mode background */
-  }
-  
-  .navbar h1 {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: color 0.5s ease-in-out;
-    font-family: 'Lora', serif; /* Use Lora font */
-    font-weight: 400; /* Regular weight for slimmer text */
-    letter-spacing: 0.1em; /* Increase letter spacing */
-    font-size: 2rem; /* Increase font size */
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    float: right;
-  }
-  
-  .navbar li {
-    float: left;
-  }
-  
-  .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.5s ease-in-out;
-  }
-  
-  .navbar li a:hover {
-    background-color: #3b82f6; /* Secondary color */
-  }
-  
-  .dark .navbar li a:hover {
-    background-color: #2d3748; /* Dark mode hover color */
-  }
-  
-  /* Styles for the night mode button */
-  .night-mode-button {
-    position: relative;
-    width: 48px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 24px;
-    transition: background-color 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .night-mode-button.active {
-    background-color: #666;
-   
-  }
-  
-  .night-mode-button .icon {
-    font-size: 16px;
-    color: #1e3a8a;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .night-mode-button.active .icon {
-    transform: translateX(24px);
-    color: #1a202c;
-  }
-  
-  .fa-sun {
-    margin-left: -45%;
-  }
-  
-  .fa-moon {
-    margin-left: -45%;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 500px) {
-    .navbar ul {
-      display: none;
-    }
-  
-    .navbar .menu-button {
-      display: block;
-    }
-  }
-  
-  .menu-button {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal.active {
-    display: flex;
-  }
-  
-  .modal-content {
-    background-color: #1e3a8a;
-    width: 100%;
-   height: 100%;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .modal-content a {
-    display: block;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    margin: 10px 0;
-  }
-  
-  .modal-content .night-mode-button {
-    margin-top: 20px;
-  }
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  /* Navbar.css */
-
-.navbar {
   background-color: #1e3a8a; /* Primary color */
   overflow: hidden;
   transition: background-color 0.5s ease-in-out;
   z-index: 50; /* Ensure navbar is on top */
 }
 
-/* Other styles remain unchanged */
+.dark .navbar {
+  background-color: #1a202c; /* Dark mode background */
+}
+
+.navbar h1 {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+  font-family: 'Lora', serif; /* Use Lora font */
+  font-weight: 400; /* Regular weight for slimmer text */
+  letter-spacing: 0.1em; /* Increase letter spacing */
+  font-size: 2rem; /* Increase font size */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.navbar li a:hover {
+  background-color: #3b82f6; /* Secondary color */
+}
+
+.dark .navbar li a:hover {
+  background-color: #2d3748; /* Dark mode hover color */
+}
+
+/* Styles for the night mode button */
+.night-mode-button {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.night-mode-button.active {
+  background-color: #666;
+}
+
+.night-mode-button .icon {
+  font-size: 16px;
+  color: #1e3a8a;
+  transition: transform 0.3s ease-in-out;
+}
+
+.night-mode-button.active .icon {
+  transform: translateX(24px);
+  color: #1a202c;
+}
+
+.fa-sun {
+  margin-left: -45%;
+}
+
+.fa-moon {
+  margin-left: -45%;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .menu-button {
+    display: block;
+  }
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #1e3a8a;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.modal-content .night-mode-button {
+  margin-top: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
